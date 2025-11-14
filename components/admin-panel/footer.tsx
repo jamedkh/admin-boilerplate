@@ -9,12 +9,11 @@ export function Footer() {
         <p className="text-xs md:text-sm leading-loose text-muted-foreground text-center">
           © {currentYear} {""}
           <Link
-            href="https://www.i-o.digital/"
-            target="_blank"
+            href="#"
             rel="noopener noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            IO Digital
+            NOVO
           </Link>
           . All rights reserved.
         </p>

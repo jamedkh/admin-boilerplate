@@ -24,17 +24,17 @@ export function LoginForm({
         <div className="grid gap-2">
           <div className="flex items-center">
             <Label htmlFor="password">Password</Label>
-            <a
+            <Link
               href="/reset-password"
               className="ml-auto text-sm underline-offset-4 hover:underline"
             >
               Forgot your password?
-            </a>
+            </Link>
           </div>
           <Input id="password" type="password" required />
         </div>
 
-        <Button asChild className="w-full bg-primary-hex">
+        <Button asChild className="w-full">
           <Link href="/dashboard">Login</Link>
         </Button>
 
@@ -57,9 +57,9 @@ export function LoginForm({
 
       <div className="text-center text-sm ">
         Don&apos;t have an account?{" "}
-        <a href="/signup" className="underline underline-offset-4">
+        <Link href="/signup" className="underline underline-offset-4">
           Sign up
-        </a>
+        </Link>
       </div>
     </form>
   );

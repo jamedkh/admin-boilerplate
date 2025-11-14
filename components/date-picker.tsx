@@ -1,15 +1,18 @@
 "use client";
 
 import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { CalendarIcon } from "lucide-react";
-import { ControllerRenderProps } from "react-hook-form";
+import { ControllerRenderProps, FieldValues, Path } from "react-hook-form";
 // import { Input } from "@/components/ui/input";
 
-export function DatePicker({
+interface DatePickerProps<TFieldValues extends FieldValues> {
+  field: ControllerRenderProps<TFieldValues, Path<TFieldValues>>;
+}
+
+export function DatePicker<TFieldValues extends FieldValues>({
   field,
-}: {
-  field: ControllerRenderProps<any, any>;
-}) {
+}: DatePickerProps<TFieldValues>) {
   return (
     <div className="relative">
       <ReactDatePicker

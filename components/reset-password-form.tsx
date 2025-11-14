@@ -19,16 +19,16 @@ export function ResetPasswordForm({
           <Input id="email" type="email" placeholder="m@example.com" required />
         </div>
 
-        <Button asChild className="w-full bg-primary-hex">
-          <Link href="/dashboard">Login</Link>
+        <Button asChild className="w-full">
+          <Link href="/dashboard">Send</Link>
         </Button>
       </div>
 
       <div className="text-center text-sm ">
         Back to{" "}
-        <a href="/login" className="underline underline-offset-4">
+        <Link href="/login" className="underline underline-offset-4">
           Login
-        </a>
+        </Link>
       </div>
     </form>
   );

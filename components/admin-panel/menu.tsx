@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Ellipsis, LogOut } from "lucide-react";
+import { Ellipsis } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -32,19 +32,17 @@ export function Menu({ isOpen }: MenuProps) {
             <li className={cn("w-full", groupLabel ? "" : "")} key={index}>
               {/* hide menu section title with 'hidden' and from above line removed padding top after groupLable ? ""  */}
               {(isOpen && groupLabel) || isOpen === undefined ? (
-                <p className="text-sm font-medium text-muted-foreground px-4 pb-2 max-w-[248px] truncate hidden">
+                <p className="text-sm font-medium text-muted-foreground opacity-70 px-4 pb-2 max-w-[248px] truncate ">
                   {groupLabel}
                 </p>
               ) : !isOpen && isOpen !== undefined && groupLabel ? (
                 <TooltipProvider>
                   <Tooltip delayDuration={100}>
-                    {/* 
                     <TooltipTrigger className="w-full">
                       <div className="w-full flex justify-center items-center">
                         <Ellipsis className="h-5 w-5" />
                       </div>
-                    </TooltipTrigger> 
-                    */}
+                    </TooltipTrigger>
                     <TooltipContent side="right">
                       <p>{groupLabel}</p>
                     </TooltipContent>
@@ -80,7 +78,7 @@ export function Menu({ isOpen }: MenuProps) {
                             >
                               <Link href={href}>
                                 <span
-                                  className={cn(isOpen === false ? "" : "mr-4")}
+                                  className={cn(isOpen === false ? "" : "")}
                                 >
                                   <Icon size={18} />
                                 </span>

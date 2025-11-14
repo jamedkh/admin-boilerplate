@@ -6,7 +6,7 @@ import {
   SquarePen,
   LayoutGrid,
   LucideIcon,
-  ClipboardList
+  ClipboardList,
 } from "lucide-react";
 
 type Submenu = {
@@ -37,9 +37,9 @@ export function getMenuList(pathname: string): Group[] {
           href: "/dashboard",
           label: "Dashboard",
           icon: LayoutGrid,
-          submenus: []
-        }
-      ]
+          submenus: [],
+        },
+      ],
     },
     {
       groupLabel: "",
@@ -48,9 +48,9 @@ export function getMenuList(pathname: string): Group[] {
           href: "/influencers",
           label: "Influencers",
           icon: Users,
-          submenus: []
-        }
-      ]
+          submenus: [],
+        },
+      ],
     },
     {
       groupLabel: "",
@@ -59,54 +59,34 @@ export function getMenuList(pathname: string): Group[] {
           href: "/campaigns",
           label: "Campaigns",
           icon: ClipboardList,
-          submenus: []
-        }
-      ]
+          submenus: [],
+        },
+      ],
     },
     {
       groupLabel: "Contents",
       menus: [
         {
-          href: "",
-          label: "Posts",
-          icon: SquarePen,
-          submenus: [
-            {
-              href: "/posts",
-              label: "All Posts"
-            },
-            {
-              href: "/posts/new",
-              label: "New Post"
-            }
-          ]
-        },
-        {
           href: "/categories",
           label: "Categories",
-          icon: Bookmark
+          icon: Bookmark,
         },
         {
           href: "/tags",
           label: "Tags",
-          icon: Tag
-        }
-      ]
+          icon: Tag,
+        },
+      ],
     },
     {
       groupLabel: "Settings",
       menus: [
         {
-          href: "/users",
-          label: "Users",
-          icon: Users
-        },
-        {
           href: "/account",
           label: "Account",
-          icon: Settings
-        }
-      ]
-    }
+          icon: Settings,
+        },
+      ],
+    },
   ];
 }

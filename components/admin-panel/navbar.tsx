@@ -8,10 +8,8 @@ import { SidebarToggle } from "./sidebar-toggle";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator
 } from "../ui/breadcrumb";
 import { GlobalSearch } from "../GlobalSearch";
 

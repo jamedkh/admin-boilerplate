@@ -2,7 +2,7 @@ import * as z from "zod";
 
 const socialSchema = z.object({
   platform: z.string().min(1, "Please select a platform"),
-  handle: z.string().url("Please enter a valid URL")
+  handle: z.string().url("Please enter a valid URL"),
 });
 
 export const formSchema = z.object({
@@ -12,7 +12,7 @@ export const formSchema = z.object({
     .regex(/^\d{10}$/)
     .optional(),
   email: z.string().email().optional(),
-  dob: z.date({ required_error: "A date of birth is required." }).optional(),
+  dob: z.date({ error: "A date of birth is required." }).optional(),
   region: z.string().min(1).optional(),
   city: z.string().min(1).optional(),
   language: z.string().min(1).optional(),
@@ -26,5 +26,5 @@ export const formSchema = z.object({
       (file) => !file || file.size <= 5 * 1024 * 1024,
       "File size must be less than 5MB"
     )
-    .optional()
+    .optional(),
 });

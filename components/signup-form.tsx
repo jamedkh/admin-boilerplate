@@ -39,16 +39,16 @@ export function SignupForm({
           <Input id="password" type="password" required />
         </div>
 
-        <Button asChild className="w-full bg-primary-hex">
+        <Button asChild className="w-full">
           <Link href="/dashboard">Submit</Link>
         </Button>
       </div>
 
       <div className="text-center text-sm ">
         Back to{" "}
-        <a href="/login" className="underline underline-offset-4">
+        <Link href="/login" className="underline underline-offset-4">
           Login
-        </a>
+        </Link>
       </div>
     </form>
   );

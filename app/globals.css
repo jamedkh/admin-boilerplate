@@ -110,13 +110,67 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  .logo-symbol-wrapper {
+    & svg {
+      & path {
+        fill: #6eef00;
+      }
+    }
+  }
+
+  .logo {
+    & .logo-text {
+      height: auto;
+      width: 80px;
+
+      & path,
+      & polygon {
+        fill: #fff;
+      }
+    }
+  }
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .react-datepicker-wrapper {
+    @apply w-full
+  }
+}
+
+.logo {
+  & .logo-text {
+    height: auto;
+    width: 80px;
+  }
+}
+
+.logo-symbol-wrapper {
+  align-items: center;
+  display: flex;
+  height: 30px;
+  position: relative;
+  justify-content: center;
+  width: 30px;
+
+  & svg {
+    display: inline-flex;
+    height: 100% !important;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+
+    & path {
+      fill: #000;
+    }
   }
 }
