@@ -9,7 +9,7 @@ export const formSchema = z.object({
     return typeof arg === "string" || arg instanceof Date
       ? new Date(arg)
       : null;
-  }, z.date({ invalid_type_error: "Please enter a valid date." }).max(new Date(), { message: "Date of birth cannot be in the future." }).optional()),
+  }, z.date({ error: "Please enter a valid date." }).max(new Date(), { message: "Date of birth cannot be in the future." }).optional()),
   email: z
     .string()
     .email({ message: "Invalid email address." })
